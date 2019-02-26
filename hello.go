@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-// this is a comment
+// коммент
 
 func main() {
-    fmt.Println("Hello World")
+    fmt.Println("Здарова!")
 }
