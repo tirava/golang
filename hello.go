@@ -1,9 +1,9 @@
-package main
+п»їpackage main
 
 import "fmt"
 
-// коммент
+// РєРѕРјРјРµРЅС‚
 
 func main() {
-    fmt.Println("Здарова!")
+    fmt.Println("Р—РґР°СЂРѕРІР°!")
 }
