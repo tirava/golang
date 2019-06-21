@@ -1,3 +1,4 @@
+// https://geekbrains.ru/events/1319
 package main
 
 import (

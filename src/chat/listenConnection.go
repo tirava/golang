@@ -31,11 +31,12 @@ func listenConnection(conn *net.TCPConn, addressBook map[string]*net.TCPConn, in
 		}
 
 		// Если сообщения не служебные, то ставим их в пользовательскую очередь сообщений
-		if !msg.Ping && !msg.Pong {
+		//if !msg.Ping && !msg.Pong {
+		if !msg.Pong {
 			incoming <- msg
-		}
+		} else {
 
-		if msg.Pong {
+			//if msg.Pong {
 			fmt.Printf("! принял соединение пользователь: %s\n", msg.FromUser)
 		}
 
@@ -44,7 +45,7 @@ func listenConnection(conn *net.TCPConn, addressBook map[string]*net.TCPConn, in
 			fmt.Printf("! принято соединение от: %s\n", msg.FromUser)
 			addressBook[msg.FromUser] = conn
 			m := message{
-				Pong: true,
+				Pong:   true,
 				ToUser: msg.FromUser,
 			}
 			outgoing <- m
