@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  background-color: #aabbba;
+  margin: 0 auto;
+}
+
+.month {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (10vw)[7];
+      grid-template-columns: repeat(7, 10vw);
+  grid-auto-rows: minmax(10vw, auto);
+}
+
+.day {
+  border: 1px solid #000;
+}
