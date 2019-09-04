@@ -21,6 +21,7 @@ const origBody = `
 func main() {
 
 	out := origHeader
+	rand.Seed(time.Now().UTC().UnixNano())
 
 	for i := 0; i < 100; i++ {
 		s := strings.Replace(origBody, "#SERIAL#", randomHex(4), 1)
